@@ -2,8 +2,8 @@ function Transaction() {
   this.history = [];
 }
 
-Transaction.prototype.add = function (transaction) {
-  this.history.push(transaction)
+Transaction.prototype.add = function (date = Date.now(), amount, balance) {
+  this.history.push([date, amount, balance])
 }
 
 Transaction.prototype.getHistory = function () {

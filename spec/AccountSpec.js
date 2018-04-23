@@ -1,5 +1,5 @@
 describe('Account', function() {
-  var account;
+  var account, transaction;
 
   beforeEach(function() {
     // arrange

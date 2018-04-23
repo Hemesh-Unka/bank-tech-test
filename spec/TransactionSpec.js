@@ -4,17 +4,16 @@ describe('Transaction', function() {
   beforeEach(function() {
     // arrange
     transaction = new Transaction()
-    fakeDeposit = ['11/08/1988', 2000, 3000];
   });
 
   describe('#addTransaction', function() {
     it("stores the transaction data into its history", function () {
       // act
-      transaction.add(fakeDeposit);
-      transaction.add(fakeDeposit);
+      transaction.add(1524496475302, 2000, 3000);
+      transaction.add(1524496475302, 2000, 3000);
 
       // assert
-      expect(transaction.getHistory()).toEqual([fakeDeposit, fakeDeposit]);
+      expect(transaction.getHistory()).toEqual([[1524496475302, 2000, 3000], [1524496475302, 2000, 3000]]);
     });
   });
 });

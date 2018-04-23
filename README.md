@@ -17,6 +17,33 @@ You'll work alone, and you'll also review your own code so you can practice refl
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
+
+### User stories
+
+```
+As an account holder
+So that I can withdraw money in the future
+I would like to store an amount of money into a account
+```
+
+```
+As an account holder
+So that I can have money to spend on goods
+I would like to withdraw an amount of money from my account
+```
+
+```
+As an account holder
+So that I can see my account actions
+I would like to see a printed statement of my bank history
+```
+
+```
+As an account holder
+So I that I can easily read my statement
+I would like to see my statement in descending order
+```
+
 ### Acceptance criteria
 
 **Given** a client makes a deposit of 1000 on 10-01-2012  

@@ -5,12 +5,13 @@ function Account(transaction = new Transaction()) {
 
 Account.prototype.deposit = function (amount) {
   this.balance += amount;
-  this.transaction.add(undefined , amount, this.balance)
+  this.transaction.add(undefined, amount, this.balance);
 };
 
 Account.prototype.withdraw = function (amount) {
   this.isSufficentFundsAvailable(amount);
   this.balance -= amount;
+  this.transaction.add(undefined, -amount, this.balance);
 };
 
 Account.prototype.isSufficentFundsAvailable = function (amount) {

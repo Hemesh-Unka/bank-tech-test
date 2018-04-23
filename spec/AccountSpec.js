@@ -1,25 +1,23 @@
 describe('Account', function() {
   var account;
 
+  beforeEach(function() {
+    // arrange
+    account = new Account();
+
+    // act
+    account.deposit(1000)
+  })
+
   describe('#deposit', function() {
     it("should be able to deposit a sum of money and update the balance", function () {
-      // arrange
-      account = new Account();
-
-      // act
-      account.deposit(1000)
-
-      // assert
+      // evaluation
       expect(account.balance).toEqual(1000);
     });
   });
 
   describe('#withdraw', function() {
     it("should be able to withdraw a sum of money and update the balance", function () {
-      // arrange
-      account = new Account();
-      account.deposit(1000);
-
       // act
       account.withdraw(500);
 
@@ -28,10 +26,6 @@ describe('Account', function() {
     });
 
     it("should throw and error if insuffecent funds are available", function() {
-      // arrange
-      account = new Account();
-      account.deposit(1000);
-
       // act
       var action = function() {
         account.withdraw(2000);

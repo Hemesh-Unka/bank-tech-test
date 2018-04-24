@@ -12,7 +12,7 @@ describe('Account', function() {
   describe('#deposit', function() {
     it("should be able to deposit a sum of money and update the balance", function () {
       // evaluation
-      expect(account.balance).toEqual(1000);
+      expect(account.balance()).toEqual(1000);
     });
   });
 
@@ -22,7 +22,7 @@ describe('Account', function() {
       account.withdraw(500);
 
       // assert
-      expect(account.balance).toEqual(500);
+      expect(account.balance()).toEqual(500);
     });
 
     it("should throw and error if insuffecent funds are available", function() {

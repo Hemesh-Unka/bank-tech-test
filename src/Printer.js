@@ -6,7 +6,7 @@ Printer.prototype.returnHeaders = function () {
 };
 
 Printer.prototype.formatTransactions = function (transactions) {
-  var string = transactions.map( transaction => this.formatTransaction(transaction) );
+  var string = transactions.reverse().map( transaction => this.formatTransaction(transaction) );
   return string.join('\n');
 };
 

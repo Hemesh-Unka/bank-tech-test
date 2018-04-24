@@ -14,8 +14,8 @@ describe('DateFormatter', function() {
       // arrange
       dateFormatter = new DateFormatter(new Date('April 07, 1995 03:24:00'));
 
+      // evaluation
       expect(dateFormatter.now()).toEqual('07/04/1995');
-
     });
   });
 });

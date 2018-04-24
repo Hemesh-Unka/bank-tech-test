@@ -7,9 +7,8 @@ DateFormatter.prototype.now = function () {
   var day = date.getDate();
   var month = date.getMonth() + 1;
   var year = date.getFullYear();
-  var output = [addZeroIfLessThanTen(day), addZeroIfLessThanTen(month), year];
+  return [addZeroIfLessThanTen(day), addZeroIfLessThanTen(month), year].join('/');
 
-  return output.join('/')
 };
 
 function addZeroIfLessThanTen(number) {

@@ -6,22 +6,22 @@ describe('Printer', function() {
     printer = new Printer();
   });
 
-  describe('#printHeaders', function() {
+  describe('#returnHeaders', function() {
     it('returns the headers of the account', function () {
 
       // evaluation
-      expect(printer.printHeaders()).toEqual('date || credit || debit || balance\n');
+      expect(printer.returnHeaders()).toEqual('date || credit || debit || balance\n');
     });
   });
 
-  describe('#printTransactions', function() {
+  describe('#formatTransactions', function() {
     it('returns the transactions in the specified format', function() {
       // arrange
       var fakeTransactionHistory = [['11/08/1988', 2000, 2000], ['12/08/1988', 2000, 4000]];
       var expectedString = '11/08/1988 || 2000 || 2000\n12/08/1988 || 2000 || 4000';
 
       // evaluation
-      expect(printer.printTransactions(fakeTransactionHistory)).toEqual(expectedString)
+      expect(printer.formatTransactions(fakeTransactionHistory)).toEqual(expectedString)
     });
   });
 

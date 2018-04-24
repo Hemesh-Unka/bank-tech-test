@@ -1,0 +1,25 @@
+{
+  "name": "bank-tt",
+  "version": "1.0.0",
+  "description": "A tech test simulating a small bank and its transactions",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine": "^3.1.0"
+  },
+  "devDependencies": {
+    "nyc": "^11.7.1"
+  },
+  "scripts": {
+    "test": "nyc jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemesh-Unka/bank-tt.git"
+  },
+  "author": "Hemesh Unka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hemesh-Unka/bank-tt/issues"
+  },
+  "homepage": "https://github.com/Hemesh-Unka/bank-tt#readme"
+}

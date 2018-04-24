@@ -9,11 +9,11 @@ describe('Transaction', function() {
   describe('#addTransaction', function() {
     it("stores the transaction data into its history", function () {
       // act
-      transaction.add('11/08/1988', 2000, 3000);
-      transaction.add('12/08/1988', 2000, 3000);
+      transaction._add('11/08/1988', 2000, 3000);
+      transaction._add('12/08/1988', 2000, 3000);
 
       // assert
-      expect(transaction.getHistory()).toEqual([['11/08/1988', 2000, 3000], ['12/08/1988', 2000, 3000]]);
+      expect(transaction.history()).toEqual([['11/08/1988', 2000, 3000], ['12/08/1988', 2000, 3000]]);
     });
   });
 });

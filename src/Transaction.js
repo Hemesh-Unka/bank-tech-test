@@ -8,5 +8,5 @@ Transaction.prototype.add = function (date = this.date.now(), amount, balance) {
 }
 
 Transaction.prototype.getHistory = function () {
-  return this.history
+  return this.history;
 };

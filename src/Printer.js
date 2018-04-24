@@ -11,9 +11,14 @@ Printer.prototype.formatTransactions = function (transactions) {
 };
 
 Printer.prototype.formatTransaction = function (transaction) {
-  return transaction.join(' || ');
+  var transactionWithDecimalPlaces = transaction.map( value => addDecimalPlaces(value));
+  return transactionWithDecimalPlaces.join(' || ');
 };
 
 Printer.prototype.printStatement = function (transactions) {
   return this.returnHeaders() + this.formatTransactions(transactions);
+};
+
+function addDecimalPlaces(value) {
+  return isNaN(value) ? value : value.toFixed(2);
 };

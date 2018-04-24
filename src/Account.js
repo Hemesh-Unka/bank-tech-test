@@ -27,8 +27,4 @@ Account.prototype.getBalance = function () {
   return this.balance;
 };
 
-Account.prototype.history = function () {
-  return this.transactionHistory.getHistory()
-};
-
 module.exports = Account;

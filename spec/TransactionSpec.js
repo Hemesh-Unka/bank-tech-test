@@ -1,5 +1,5 @@
 describe('Transaction', function() {
-  var transaction, fakeDeposit;
+  var transaction, fakeDeposit, date;
 
   beforeEach(function() {
     // arrange
@@ -9,11 +9,11 @@ describe('Transaction', function() {
   describe('#addTransaction', function() {
     it("stores the transaction data into its history", function () {
       // act
-      transaction.add(1524496475302, 2000, 3000);
-      transaction.add(1524496475302, 2000, 3000);
+      transaction.add('11/08/1988', 2000, 3000);
+      transaction.add('12/08/1988', 2000, 3000);
 
       // assert
-      expect(transaction.getHistory()).toEqual([[1524496475302, 2000, 3000], [1524496475302, 2000, 3000]]);
+      expect(transaction.getHistory()).toEqual([['11/08/1988', 2000, 3000], ['12/08/1988', 2000, 3000]]);
     });
   });
 });

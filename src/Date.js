@@ -8,7 +8,6 @@ DateFormatter.prototype.now = function () {
   var month = date.getMonth() + 1;
   var year = date.getFullYear();
   return [addZeroIfLessThanTen(day), addZeroIfLessThanTen(month), year].join('/');
-
 };
 
 function addZeroIfLessThanTen(number) {

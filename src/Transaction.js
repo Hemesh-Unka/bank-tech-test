@@ -1,8 +1,9 @@
-function Transaction() {
+function Transaction(date = new DateFormatter()) {
   this.history = [];
+  this.date = date;
 }
 
-Transaction.prototype.add = function (date = Date.now(), amount, balance) {
+Transaction.prototype.add = function (date = this.date.now(), amount, balance) {
   this.history.push([date, amount, balance])
 }
 

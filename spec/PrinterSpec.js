@@ -17,8 +17,8 @@ describe('Printer', function() {
   describe('#printTransactions', function() {
     it('returns the transactions in the specified format', function() {
       // arrange
-      var fakeTransactionHistory = [[1524496475302, 2000, 2000], [1524496475303, 2000, 4000]];
-      var expectedString = '1524496475302 || 2000 || 2000\n1524496475303 || 2000 || 4000';
+      var fakeTransactionHistory = [['11/08/1988', 2000, 2000], ['12/08/1988', 2000, 4000]];
+      var expectedString = '11/08/1988 || 2000 || 2000\n12/08/1988 || 2000 || 4000';
 
       // evaluation
       expect(printer.printTransactions(fakeTransactionHistory)).toEqual(expectedString)
@@ -29,8 +29,8 @@ describe('Printer', function() {
     it('prints out the headers with the statement', function() {
       // arrange
       var headers = 'date || credit || debit || balance\n';
-      var fakeTransactionHistory = [[1524496475302, 2000, 2000], [1524496475303, 2000, 4000]];
-      var expectedString = headers + '1524496475302 || 2000 || 2000\n1524496475303 || 2000 || 4000';
+      var fakeTransactionHistory = [['11/08/1988', 2000, 2000], ['12/08/1988', 2000, 4000]];
+      var expectedString = headers + '11/08/1988 || 2000 || 2000\n12/08/1988 || 2000 || 4000';
 
       // evaluation
       expect(printer.printStatement(fakeTransactionHistory)).toEqual(expectedString)

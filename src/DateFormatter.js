@@ -13,3 +13,5 @@ DateFormatter.prototype.now = function () {
 function addZeroIfLessThanTen(number) {
   return (number < 10 ? "0" : "") + number;
 };
+
+module.exports = DateFormatter;

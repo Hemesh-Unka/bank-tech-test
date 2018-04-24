@@ -22,3 +22,5 @@ Printer.prototype.printStatement = function (transactions) {
 function addDecimalPlaces(value) {
   return isNaN(value) ? value : value.toFixed(2);
 };
+
+module.exports = Printer;

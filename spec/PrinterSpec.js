@@ -1,4 +1,5 @@
 describe('Printer', function() {
+  var Printer = require('../src/Printer');
   var printer;
 
   beforeEach(function() {

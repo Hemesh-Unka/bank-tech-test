@@ -1,5 +1,6 @@
 describe('Account', function() {
-  var account, transaction;
+  var Account = require('../src/Account');
+  var account;
 
   beforeEach(function() {
     // arrange
@@ -24,7 +25,7 @@ describe('Account', function() {
       // assert
       expect(account.getBalance()).toEqual(500);
     });
-
+  
     it("should throw and error if insuffecent funds are available", function() {
       // act
       var action = function() {

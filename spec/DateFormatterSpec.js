@@ -1,5 +1,6 @@
 describe('DateFormatter', function() {
-  var date;
+  var DateFormatter = require('../src/DateFormatter');
+  var dateFormatter;
 
   describe('#now', function() {
     it('returns the current date in the required format', function() {

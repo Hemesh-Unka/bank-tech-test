@@ -1,18 +1,21 @@
-function Account(transaction = new Transaction()) {
+var TransactionHistory = require('./TransactionHistory');
+
+function Account() {
   this.balance = 0;
-  this.transaction = transaction;
-}
+  this.transactionHistory = new TransactionHistory();
+};
 
 Account.prototype.deposit = function (amount) {
   this.balance += amount;
-  this.transaction._add(undefined, amount, this.getBalance());
+  this.transactionHistory._add(undefined, amount, this.getBalance());
 };
+
 
 Account.prototype.withdraw = function (amount) {
   this.isSufficentFundsAvailable(amount);
   this.balance -= amount;
-  this.transaction._add(undefined, -amount, this.getBalance());
-}
+  this.transactionHistory._add(undefined, -amount, this.getBalance());
+};
 
 Account.prototype.isSufficentFundsAvailable = function (amount) {
   if ((this.getBalance() - amount) < 0) {
@@ -25,5 +28,7 @@ Account.prototype.getBalance = function () {
 };
 
 Account.prototype.history = function () {
-  return this.transaction.getHistory()
-}
+  return this.transactionHistory.getHistory()
+};
+
+module.exports = Account;

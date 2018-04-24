@@ -1,5 +1,6 @@
 describe('Transaction', function() {
-  var transaction, fakeDeposit, date;
+  var Transaction = require('../src/TransactionHistory');
+  var transaction;
 
   beforeEach(function() {
     // arrange

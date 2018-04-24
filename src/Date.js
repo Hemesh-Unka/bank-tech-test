@@ -3,7 +3,7 @@ function DateFormatter(date = undefined) {
 };
 
 DateFormatter.prototype.now = function () {
-  var date = new Date();
+  var date = this.date ? this.date : new Date();
   var day = date.getDate();
   var month = date.getMonth() + 1;
   var year = date.getFullYear();

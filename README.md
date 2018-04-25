@@ -4,11 +4,13 @@
 
 After going over the spec a few times, I broke the test down into user stories (included below). From there I broke the classes down and created a domain model of how the program would sort of look.
 
-I chose Jasmine as my testing framework of choice due to the fact that I had used it during the course. I structured my code so it was modular and simple to read. This could be test could be broken down more, but I realized that it would take too much time to implement. I was happy at the tests as I approached them in a more behavioral way, and managed to attain a 100% test coverage across the test.
+I chose Jasmine as my testing framework of choice due to the fact that I had used it during the course. I structured my code so it was modular and simple to read. This could be broken down more, but I realized that it would take too much time to implement.
+
+I was happy how I approached testing in a more behavioral way, and managed to maintain a 100% test coverage across the project.
 
 ## Things to Improve On
 
-Some things I feel I could improve on in this code, include the use of mocks within the tests. I also feel I need to work on my approach to domain modeling to get a clearer picture of how the program will take shape earlier on in the development process.
+Some things I feel I could improve on in this code, include the use of mocks within the tests. I also feel I need to work on my approach to domain modeling to get a clearer picture of how the program will take shape earlier on in the development process. Another issue I came across was how can I get the user to interact with the code. I found out that `require` only works in node environments, and will not work in the browser. One option was to run a node server, requiring the files and presenting an html page with these modules loaded.
 
 ## Specification
 
@@ -50,8 +52,6 @@ date || credit || debit || balance
 24/04/2018 || 2000.00 || 3000.00
 24/04/2018 || 1000.00 || 1000.00
 ```
-
-
 
 ## Tech Used
 - JavaScript

@@ -1,8 +1,8 @@
 var DateFormatter = require('./DateFormatter');
 
-function TransactionHistory() {
+function TransactionHistory(dateFormatter = new DateFormatter()) {
   this._history = [];
-  this._date = new DateFormatter();
+  this._date = dateFormatter;
 };
 
 TransactionHistory.prototype._add = function (date = this._date.now(), amount, balance) {

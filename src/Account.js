@@ -1,15 +1,14 @@
 var TransactionHistory = require('./TransactionHistory');
 
-function Account() {
+function Account(transactionHistory = new TransactionHistory()) {
   this.balance = 0;
-  this.transactionHistory = new TransactionHistory();
+  this.transactionHistory = transactionHistory;
 };
 
 Account.prototype.deposit = function (amount) {
   this.balance += amount;
   this.transactionHistory._add(undefined, amount, this.getBalance());
 };
-
 
 Account.prototype.withdraw = function (amount) {
   this.isSufficentFundsAvailable(amount);

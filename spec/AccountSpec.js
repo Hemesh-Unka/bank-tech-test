@@ -5,6 +5,7 @@ describe('Account', function() {
   beforeEach(function() {
     // arrange
     account = new Account();
+    // transactionHistory = jasmine.createSpyObj('transaction')
 
     // act
     account.deposit(1000)
@@ -25,7 +26,7 @@ describe('Account', function() {
       // assert
       expect(account.getBalance()).toEqual(500);
     });
-  
+
     it("should throw and error if insuffecent funds are available", function() {
       // act
       var action = function() {
